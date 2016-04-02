@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+ES_HOST=localhost ./node_modules/.bin/forever -w ./bin/demo

@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+"use strict";
+
+let fixture = require("z-fixture-loader");
+let app = require('../app');
+
+fixture.loadFixturesToElasticsearch(function(error){
+    if(error){
+        return console.error(error);
+    }
+    app.set('port', process.env.PORT || 3000);
+    var server = app.listen(app.get('port'), function() {
+        console.log('Express server listening on port ' + server.address().port);
+    });
+
+});
+
+
+
+
+
+

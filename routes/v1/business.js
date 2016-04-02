@@ -1,6 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var businessHandler = require("../../routeHandlers/businessHandler")
+"use strict";
+const express = require('express');
+const router = express.Router();
+const businessHandler = require("../../routeHandlers/businessHandler");
 
 router.get('/:businessId', function(req, res, next) {
     businessHandler.getBusinessById(req, res, next);

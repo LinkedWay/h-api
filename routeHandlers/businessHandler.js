@@ -1,9 +1,9 @@
 var business = require("../lib/business")
 
-function getBusinessId(req, res, next){
+function getBusinessById(req, res, next){
   business.getBusinessById(req.params["businessId"], function(err, business){
     if(err) {
-      console.log(err.message)
+      console.log(err.message);
       next(err)
     } else if(business==null) {
       next(new Error("Business not found"))
@@ -14,5 +14,5 @@ function getBusinessId(req, res, next){
 }
 
 module.exports = {
-  getBusinessId: getBusinessId
+  getBusinessById: getBusinessById
 }

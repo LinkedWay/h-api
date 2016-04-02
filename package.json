@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node_modules/.bin/forever -w ./bin/www"
+    "start": "node_modules/.bin/forever -w ./bin/www",
+    "test": "docker-compose run -e ES_HOST=h-api-elasticsearch app ./node_modules/.bin/mocha test"
   },
   "dependencies": {
     "body-parser": "^1.13.3",
@@ -16,8 +17,7 @@
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
-    "fixture-loader": "^0.2.5",
     "mocha": "2.4.5",
-    "z-fixture-loader": "^1.0.0"
+    "z-fixture-loader": "1.0.3"
   }
 }
