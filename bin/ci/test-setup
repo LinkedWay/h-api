@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# To be used in CI build steps
+set -e
+
+docker-compose  stop && \
+docker-compose  rm --force
+
+docker-compose build
